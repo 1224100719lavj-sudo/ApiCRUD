@@ -1,0 +1,13 @@
+package mx.edu.utng.lavj.gestionestudiantes.ui.dataremote
+
+
+
+
+import retrofit2.http.GET
+
+
+
+interface ApiService {
+    @GET("estudiantes/")
+    suspend fun getEstudiantes(): List<Estudiante>
+}
