@@ -1,0 +1,27 @@
+package mx.edu.utng.lavj.gestionestudiantes.ui.dataremote
+
+class EstudianteRepository {
+
+    
+    private val api = RetrofitClient.apiService
+
+    
+    suspend fun getAll(): List<Estudiante> {
+        return api.getEstudiantes()
+    }
+
+   
+    suspend fun add(estudiante: Estudiante): Estudiante {
+        return api.addEstudiante(estudiante)
+    }
+
+   
+    suspend fun update(id: Int, estudiante: Estudiante): Estudiante {
+        return api.updateEstudiante(id, estudiante)
+    }
+
+    suspend fun delete(id: Int) {
+        api.deleteEstudiante(id)
+    }
+    
+}
