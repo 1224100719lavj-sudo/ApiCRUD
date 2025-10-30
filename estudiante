@@ -1,0 +1,15 @@
+package mx.edu.utng.lavj.gestionestudiantes.ui.dataremote
+
+import com.google.gson.annotations.SerializedName
+
+
+
+
+data class Estudiante(
+    val id: Int? = null,
+    val nombre: String,
+    val edad: Int,
+    val carrera: String,
+    val promedio: Double,
+    val fecha_registro: String? = null
+)
